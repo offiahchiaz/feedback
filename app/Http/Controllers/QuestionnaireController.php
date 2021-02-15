@@ -30,6 +30,7 @@ class QuestionnaireController extends Controller
 
     public function show(\App\Questionnaire $questionnaire) 
     {
+        
         return view('questionnaire.show', compact('questionnaire'));
     }
 }
