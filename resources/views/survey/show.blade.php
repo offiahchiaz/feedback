@@ -42,7 +42,48 @@
                     </div>
                 @endforeach
 
-                <button class="btn btn-dark mt-2" type="submit">Complete Survey</button>
+                {{-- User details --}}
+                <div class="card mt-4">
+                    <div class="card-header">Your Information</div>
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input name="survey[name]" type="text" class="form-control @error('survey.name') is-invalid @enderror" 
+                                id="name" aria-describedby="nameHelp" placeholder="Enter Name" autocomplete="name" autofocus>
+                            <small id="nameHelp" class="form-text text-muted">
+                                Hello! What's your name?
+                            </small>
+    
+                            @error('survey.name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="email">Purpose</label>
+                            <input name="survey[email]" type="email" class="form-control @error('survey.email') is-invalid @enderror" 
+                                id="email" aria-describedby="emailHelp" placeholder="Enter Email" autocomplete="email">
+                            <small id="emailHelp" class="form-text text-muted">
+                                Your Email Please.
+                            </small>
+    
+                            @error('survey.email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div> 
+                        <div>
+                            <button class="btn btn-dark mt-2" 
+                                type="submit">
+                                Complete Survey
+                            </button>
+                        </div>
+                    </div>       
+                </div>          
             </form>
         </div>
     </div>
