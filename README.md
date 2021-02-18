@@ -8,7 +8,7 @@
 </p> -->
 
 <!-- <p align="center"> FeedBack </p> -->
-<h1 style="font-size:10vw">FeedBack</h1>
+<h1 style="font-size:10vw" align="center">FeedBack</h1>
 
 ## About 
 
